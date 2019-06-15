@@ -1,0 +1,59 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~font-awesome/css/font-awesome.css";
+// Imports functions, variables, and mixins that are needed by other Bootstrap files
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+// Import Roboot
+@import "~bootstrap/scss/reboot";
+@import "reset";
+
+$primary: #3f51b5;
+
+body {
+  width: 90%;
+  margin: auto;
+}
+
+table.mat-table {
+  max-width: 100%;
+  overflow-x: scroll;
+  display: block;
+}
+
+th.mat-header-cell {
+  min-width: 200px;
+  font-size: 13px;
+}
+
+.sup {
+  position: relative;
+  bottom: 1ex;
+  font-size: 80%;
+}
+
+.log {
+  position: relative;
+  top: 1ex;
+  font-size: 80%;
+}
+
+.mat-display-1 {
+  color: #003366 !important;
+  text-transform: uppercase;
+}
+
+mat-form-field {
+  width: inherit;
+}
+
+mat-icon.clickable {
+    cursor: pointer;
+}
+
+mat-icon {
+    color: $primary;
+}
