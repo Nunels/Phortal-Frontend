@@ -13,14 +13,17 @@ import { Fotografia } from '../../data/model/Fotografia';
 export class HomeComponent {
     text = AppComponent.text;
     fotografie:Fotografia[]=[];
-    img:string="data:image/jpg;base64,";
+    
 
     constructor(private fotografiaService: FotografiaService) { }
     ngOnInit() {
         this.fotografiaService.getElencoImmagini().subscribe(response => {
             this.fotografie = response
-        console.log(this.fotografie[0].id)
-    this.img=this.img+this.fotografie[0].img} );
+        } );
+    }
+    aggiungiCarrello(fotografia:Fotografia){
+        this.fotografiaService.aggiungiFotografia(fotografia);
+        console.log(this.fotografiaService.getFotografiaCarrello().length)
     }
 
 }

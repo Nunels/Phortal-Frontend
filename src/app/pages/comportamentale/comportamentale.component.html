@@ -1,11 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1 class="mat-display-1">
-  {{text.title.comportamentale}}
+  Pannello Admin
 </h1>
-<app-file-upload (fileUpload)="file = $event"></app-file-upload>
+<mat-tab-group>
+  <mat-tab label="Carica Foto">
+    <app-file-upload (fileUpload)="file = $event"></app-file-upload>
+    <button mat-raised-button color="primary" (click)="salvaImmagine()">
+      Carica
+    </button>
+
+    <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
+    <div *ngIf="caricata"><span>File caricato </span>
+      <div>
+      <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco2" /></div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Visualizza Richieste">  </mat-tab>
+</mat-tab-group>
+
+<!-- 
 <div class="pt-5"></div>
 <mat-tab-group *ngIf="file.size > 0">
   <mat-tab [label]="text.title.dati">
     <app-dynamic-table [data]="data" [columns]="columns"></app-dynamic-table>
   </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->

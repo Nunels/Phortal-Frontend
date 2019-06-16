@@ -3,6 +3,7 @@ import { ComportamentaleComponent } from '../app/pages/comportamentale/comportam
 import { HomeComponent } from '../app/pages/home/home.component';
 import { RegistrazioneComponent } from '../app/pages/registrazione/registrazione.component';
 import { Routes, RouterModule } from '@angular/router';
+import { FotografiComponent } from './pages/fotografi/fotografi.component';
 
 const routes: Routes = [
         {
@@ -17,6 +18,10 @@ const routes: Routes = [
         path: 'registrazione',
         component: RegistrazioneComponent,
     },
+    {
+        path: 'fotografi',
+        component: FotografiComponent,
+    }
 ];
 
 @NgModule({
