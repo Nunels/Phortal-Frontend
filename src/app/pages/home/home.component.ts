@@ -7,7 +7,7 @@ import { Fotografia } from '../../data/model/Fotografia';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    providers: [FotografiaService]
+
 
 })
 export class HomeComponent {
@@ -23,7 +23,6 @@ export class HomeComponent {
     }
     aggiungiCarrello(fotografia:Fotografia){
         this.fotografiaService.aggiungiFotografia(fotografia);
-        console.log(this.fotografiaService.getFotografiaCarrello().length)
     }
 
 }

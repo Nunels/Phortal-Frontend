@@ -5,9 +5,10 @@
     <div class="col-md-6 col-12">
         <h2 >Carrello:</h2>
         <div *ngIf="fotografie.length>0" class="row">
-                <div *ngFor="let fotografia of fotografie" class="col-md-6 col-12">
-                            <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco" />
-                            <div><mat-icon aria-hidden="false" aria-label="aggiungi al carrello" (click)="aggiungiCarrello(fotografia)">add_shopping_cart</mat-icon></div>
+                <div *ngFor="let fotografia of fotografie" class="col-sm-6 col-12">
+                            <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco3" />
+                            <div><mat-icon aria-hidden="false" aria-label="aggiungi al carrello" (click)="rimuoviCarrello(fotografia)">remove_shopping_cart
+                                </mat-icon></div>
                 </div>
             </div>
     </div>

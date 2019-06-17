@@ -3,7 +3,9 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Fotografia } from '../model/fotografia';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class FotografiaService {
 
     fotografieCarrello:Fotografia[]=[];
@@ -24,8 +26,7 @@ export class FotografiaService {
     removeFotografia(fotografia:Fotografia){
         this.fotografieCarrello.splice(this.fotografieCarrello.indexOf(fotografia),1);
     }
-    getFotografiaCarrello():Fotografia[]{
-        console.log(this.fotografieCarrello.length)
+    getFotografieCarrello():Fotografia[]{
 
         return this.fotografieCarrello;
         

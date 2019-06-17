@@ -4,11 +4,12 @@ import { AppComponent } from '../../app.component';
 import { RegistrazioneService } from 'src/app/data/service/registrazione.service';
 import { Fotografia } from 'src/app/data/model/fotografia';
 import { FotografiaService } from 'src/app/data/service/fotografia.service';
+import { Richiesta } from 'src/app/data/model/richiesta';
 
 @Component({
     selector: 'app-registrazione',
     templateUrl: './registrazione.component.html',
-    providers: [FotografiaService],
+    
 })
 export class RegistrazioneComponent implements OnInit {
     text = AppComponent.text;
@@ -24,18 +25,24 @@ export class RegistrazioneComponent implements OnInit {
     constructor(private formBuilder: FormBuilder, private fotografiaService: FotografiaService) { }
 
     ngOnInit() {
+        this.fotografie=this.fotografiaService.getFotografieCarrello();
         this.registerForm = this.formBuilder.group({
             nome: ['', Validators.required],
             cognome: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, Validators.minLength(6)]],
-            regione: ['', Validators.required],
         });
-        this.fotografie=this.fotografiaService.getFotografiaCarrello();
+
     }
 
     onSubmit() {
-        console.log(this.nome);
+        if(this.registerForm.valid){
+        let richiesta=new Richiesta();
+        richiesta.nome=this.registerForm.controls['nome'].value;
+        console.log(richiesta.nome);
+        }
+    }
+    rimuoviCarrello(fotografia:Fotografia){
+        this.fotografiaService.removeFotografia(fotografia);
     }
     
 }
