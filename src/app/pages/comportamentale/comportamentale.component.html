@@ -12,10 +12,16 @@
     <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
     <div *ngIf="caricata"><span>File caricato </span>
       <div>
-      <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco2" /></div>
+        <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco2" /></div>
     </div>
   </mat-tab>
-  <mat-tab label="Visualizza Richieste">  </mat-tab>
+  <mat-tab label="Visualizza Richieste"> <div *ngIf="richieste.length>0">
+    <div *ngFor="let richiesta of richieste">
+      Nome: {{richiesta.nome}} Cognome:{{richiesta.cognome}} Email:{{richiesta.email}}
+
+    </div>
+  </div></mat-tab>
+  
 </mat-tab-group>
 
 <!-- 

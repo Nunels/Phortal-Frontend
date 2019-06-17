@@ -13,5 +13,8 @@ export class RichiestaService {
         return this.http.get<Richiesta[]>('http://localhost:8080/richieste');
     }
 
-    
+    postSalvaRichiesta(richiesta:Richiesta):Observable<Richiesta>{
+
+        return this.http.post<Richiesta>('http://localhost:8080/richieste',richiesta);
+    }
 }

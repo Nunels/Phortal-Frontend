@@ -16,6 +16,7 @@ export class HomeComponent {
     
 
     constructor(private fotografiaService: FotografiaService) { }
+    
     ngOnInit() {
         this.fotografiaService.getElencoImmagini().subscribe(response => {
             this.fotografie = response
