@@ -25,12 +25,15 @@ export class ComportamentaleComponent implements OnInit {
     displayedColumns = this.columns.map(x => x.columnDef);
     caricata: boolean = false;
     richieste:Richiesta[]=[];
+    fotografie:Fotografia[]=[];
 
     constructor(private fotografiaService: FotografiaService,private richiestaService:RichiestaService) { }
     ngOnInit() {
         this.richiestaService.getElencoRichieste().subscribe(response => {
             this.richieste = response
-        } );    }
+        } );    
+
+}
     salvaImmagine() {
 
             this.caricata = true;

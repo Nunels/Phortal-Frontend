@@ -54,7 +54,7 @@ export class RegistrazioneComponent implements OnInit {
         this.richiestaService.postSalvaRichiesta(richiesta).subscribe(response => {
             this.richiesta=response
         });
-
+        this.fotografie=[];
         }
     }
     rimuoviCarrello(fotografia:Fotografia){
