@@ -12,7 +12,6 @@ import { FotografoService } from 'src/app/data/service/fotografo.service';
 
 export class FotografiComponent implements OnInit {
     fotografi: Fotografo[] = [];
-    columns = AppComponent.columns.comportamentale.dati;
 
     constructor(private fotografoService: FotografoService) { }
     ngOnInit() {

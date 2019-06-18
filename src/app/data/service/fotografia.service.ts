@@ -31,6 +31,9 @@ export class FotografiaService {
         return this.fotografieCarrello;
         
     }
+    resetCarrello(){
+        this.fotografieCarrello=[];
+    }
 
     
 }

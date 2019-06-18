@@ -1,4 +1,4 @@
-export class Comportamentale {
+export class Admin {
     id: number;
     nominativoGDC: string;
     anteGDC: number;

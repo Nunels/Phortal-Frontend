@@ -59,8 +59,8 @@ mat-icon {
     cursor: pointer;
 }
 .elenco{
-  height: 80%;
-  width: 80%;  
+  width:70%;
+  height:auto; 
 }
 .elenco2{
   height: 50%;
@@ -69,8 +69,24 @@ mat-icon {
 h2{
   color: #003366;
 }
+h1{
+  color: #003366;
+}
 .elenco3{
   height: 70%;
   width: 70%;  
 }
+.bottone1{
+  color:white;
+}
+.card1{
+  color:lightblue;
+  background-color: lightblue;
+}
 
+.notifica{
+  color:red;
+}
+.grassetto{
+  font-weight: bold;
+}

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ComportamentaleComponent } from '../app/pages/comportamentale/comportamentale.component';
+import { AdminComponent } from './pages/admin/admin.component';
 import { HomeComponent } from '../app/pages/home/home.component';
-import { RegistrazioneComponent } from '../app/pages/registrazione/registrazione.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FotografiComponent } from './pages/fotografi/fotografi.component';
+import { CarrelloComponent } from './pages/carrello/carrello.component';
 
 const routes: Routes = [
         {
@@ -11,12 +11,12 @@ const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'comportamentale',
-        component: ComportamentaleComponent,
+        path: 'admin',
+        component: AdminComponent,
     },
     {
-        path: 'registrazione',
-        component: RegistrazioneComponent,
+        path: 'carrello',
+        component: CarrelloComponent,
     },
     {
         path: 'fotografi',

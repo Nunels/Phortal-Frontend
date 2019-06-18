@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { ComportamentaleModule } from './pages/comportamentale/comportamentale.module';
-import { RegistrazioneModule } from './pages/registrazione/registrazione.module';
+import { AdminModule } from './pages/admin/admin.module';
+import { CarrelloModule } from './pages/carrello/carrello.module';
 import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FotografiModule } from './pages/fotografi/fotografi.module';
@@ -23,9 +23,9 @@ import { FotografiModule } from './pages/fotografi/fotografi.module';
         BrowserAnimationsModule,
         AngularFontAwesomeModule,
         HttpClientModule,
-        ComportamentaleModule,
+        AdminModule,
         HomeModule,
-        RegistrazioneModule,
+        CarrelloModule,
         FotografiModule
         
         

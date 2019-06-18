@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegistrazioneComponent } from './registrazione.component';
+import {CarrelloComponent } from './carrello.component';
 import { RouterModule } from '@angular/router';
 import { ThemeModule } from '../../@theme/theme.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,7 +8,7 @@ import { AutocompleteComponent } from 'src/app/customComponents/autocomplete/aut
 
 @NgModule({
     declarations: [
-        RegistrazioneComponent,
+       CarrelloComponent,
         AutocompleteComponent,
     ],
     imports: [
@@ -20,4 +20,4 @@ import { AutocompleteComponent } from 'src/app/customComponents/autocomplete/aut
     ],
     providers: [],
 })
-export class RegistrazioneModule { }
+export class CarrelloModule { }

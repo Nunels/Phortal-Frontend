@@ -1,20 +1,32 @@
-<button mat-raised-button color="primary" routerLink="/comportamentale" routerLinkActive="active">
-    Pannello Admin
-</button>
-<button mat-raised-button color="primary" routerLink="/registrazione" routerLinkActive="active">
-    Carrello
-</button>
+<mat-card class="mt-3">
+    <mat-card-content>
+            <h1><b>SILPH s.p.a.</b>
+        <button  class="ml-3" mat-raised-button color="primary" routerLink="/admin" routerLinkActive="active">
+            Pannello Admin <mat-icon class="bottone1">build</mat-icon>
+        </button>
+        <button class="ml-3" mat-raised-button color="primary" routerLink="/fotografi" routerLinkActive="active">
+            Fotografi <mat-icon class="bottone1">photo_camera</mat-icon>
+        </button>
+        <button class="ml-3" mat-raised-button color="primary" routerLink="/carrello" routerLinkActive="active">
+            Carrello <mat-icon class="bottone1">shopping_cart</mat-icon>
+        </button>
+    </h1>
+    </mat-card-content>
+</mat-card>
 
-<button mat-raised-button color="primary" routerLink="/fotografi" routerLinkActive="active">
-    fotografi
-</button>
-<mat-card>
-        <mat-card-content>
-<div *ngIf="fotografie.length>0" class="row">
-    <div *ngFor="let fotografia of fotografie" class="col-md-4 col-12">
+
+<mat-card class="mt-3">
+    <mat-card-content>
+        <div *ngIf="fotografie.length>0" class="row">
+            <div *ngFor="let fotografia of fotografie" class="col-md-4 col-12">
                 <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco" />
-                <div><mat-icon aria-hidden="false" aria-label="aggiungi al carrello" (click)="aggiungiCarrello(fotografia)">add_shopping_cart</mat-icon></div>
-    </div>
-</div>
-</mat-card-content>
+                <div>
+                    <button color="primary" mat-raised-button class="mt-2" (click)="aggiungiCarrello(fotografia)">
+                    <mat-icon class="bottone1" aria-hidden="false" aria-label="aggiungi al carrello"
+                        >add_shopping_cart</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
 </mat-card>
