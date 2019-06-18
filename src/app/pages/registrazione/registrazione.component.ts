@@ -55,6 +55,7 @@ export class RegistrazioneComponent implements OnInit {
             this.richiesta=response
         });
         this.fotografie=[];
+        this.richiesta.fotoRichieste=[];
         }
     }
     rimuoviCarrello(fotografia:Fotografia){

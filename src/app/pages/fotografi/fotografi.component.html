@@ -1,0 +1,10 @@
+<h1 class="mat-display-1">
+Fotografi</h1>
+<div *ngIf="fotografi.length>0" class="row">
+    <div *ngFor="let fotografo of fotografi">
+        <div>
+            <mat-icon aria-hidden="false">keyboard_arrow_right</mat-icon>
+            <b>Id:</b> {{fotografo.id}}, <b>Nome:</b> {{fotografo.nome}}, <b>Cognome:</b> {{fotografo.cognome}}    </div>
+        </div>
+</div>
+

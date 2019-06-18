@@ -9,13 +9,13 @@ import { ComportamentaleModule } from './pages/comportamentale/comportamentale.m
 import { RegistrazioneModule } from './pages/registrazione/registrazione.module';
 import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FotografiComponent } from './pages/fotografi/fotografi.component';
+import { FotografiModule } from './pages/fotografi/fotografi.module';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        FotografiComponent
+        
     ],
     imports: [
         BrowserModule,
@@ -26,6 +26,7 @@ import { FotografiComponent } from './pages/fotografi/fotografi.component';
         ComportamentaleModule,
         HomeModule,
         RegistrazioneModule,
+        FotografiModule
         
         
     ],
