@@ -1,14 +1,14 @@
-
 <mat-card class="mt-3">
     <h1>
-    <b>Fotografi</b></h1>
-    </mat-card>
-    <mat-card class="mt-3">
+        <b>Fotografi <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
+        </b></h1>
+</mat-card>
+<mat-card class="mt-3">
 
-<div *ngIf="fotografi.length>0">
-    <div *ngFor="let fotografo of fotografi">
+    <div *ngIf="fotografi.length>0">
+        <div *ngFor="let fotografo of fotografi">
             <mat-icon aria-hidden="false">keyboard_arrow_right</mat-icon>
-            <b>Id:</b> {{fotografo.id}}, <b>Nome:</b> {{fotografo.nome}}, <b>Cognome:</b> {{fotografo.cognome}} 
+            <b>Id:</b> {{fotografo.id}}, <b>Nome:</b> {{fotografo.nome}}, <b>Cognome:</b> {{fotografo.cognome}}
+        </div>
     </div>
-</div>
 </mat-card>

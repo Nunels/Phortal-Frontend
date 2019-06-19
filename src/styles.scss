@@ -59,8 +59,9 @@ mat-icon {
     cursor: pointer;
 }
 .elenco{
-  width:70%;
+  width:100%;
   height:auto; 
+  cursor: pointer;
 }
 .elenco2{
   height: 50%;
@@ -86,7 +87,12 @@ h1{
 
 .notifica{
   color:red;
-}
-.grassetto{
   font-weight: bold;
+}
+.puntatore{
+  cursor: pointer;
+}
+.fotografia{
+  width:65%;
+  height:auto; 
 }

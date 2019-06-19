@@ -22,6 +22,7 @@ export class CarrelloComponent implements OnInit {
     fotografie: Fotografia[] = [];
     inviata: boolean = false;
     richiesta: Richiesta;
+    carrelloVuoto:boolean=false;
 
     constructor(private formBuilder: FormBuilder, private fotografiaService: FotografiaService
         , private richiestaService: RichiestaService) { }
@@ -39,7 +40,10 @@ export class CarrelloComponent implements OnInit {
     }
     //onSubmit()
     salvaRichiesta() {
-        if (this.registerForm.valid) {
+        if(!(this.fotografie.length>0)){
+            this.carrelloVuoto=true;
+        } 
+         if (this.registerForm.valid && this.fotografie.length>0) {
             let richiesta = new Richiesta();
             richiesta.nome = this.registerForm.controls['nome'].value;
             richiesta.cognome = this.registerForm.controls['cognome'].value;
@@ -60,6 +64,7 @@ export class CarrelloComponent implements OnInit {
     svuotaCarrello() {
         this.fotografie = [];
         this.fotografiaService.resetCarrello();
+        this.carrelloVuoto=true;
     }
 
 }

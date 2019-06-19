@@ -4,6 +4,7 @@ import { HomeComponent } from '../app/pages/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FotografiComponent } from './pages/fotografi/fotografi.component';
 import { CarrelloComponent } from './pages/carrello/carrello.component';
+import { FotografiaComponent } from './pages/fotografia/fotografia.component';
 
 const routes: Routes = [
         {
@@ -21,7 +22,9 @@ const routes: Routes = [
     {
         path: 'fotografi',
         component: FotografiComponent,
-    }
+    },
+    {path:'fotografia',
+component:FotografiaComponent,}
 ];
 
 @NgModule({

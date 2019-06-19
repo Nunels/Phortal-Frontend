@@ -19,7 +19,8 @@
     <mat-card-content>
         <div *ngIf="fotografie.length>0" class="row">
             <div *ngFor="let fotografia of fotografie" class="col-md-4 col-12">
-                <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco" />
+                <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco" 
+                (click)="visualizza(fotografia)" routerLink="fotografia" routerLinkActive="active" />
                 <div>
                     <button color="primary" mat-raised-button class="mt-2" (click)="aggiungiCarrello(fotografia)">
                     <mat-icon class="bottone1" aria-hidden="false" aria-label="aggiungi al carrello"

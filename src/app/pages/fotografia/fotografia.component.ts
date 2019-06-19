@@ -3,32 +3,27 @@ import { AppComponent} from '../../app.component';
 import { FotografiaService } from '../../data/service/fotografia.service';
 import { Fotografia } from '../../data/model/Fotografia';
 
-
 @Component({
     selector: 'app-home',
-    templateUrl: './home.component.html',
+    templateUrl: './fotografia.component.html',
 
 
 })
-export class HomeComponent {
+export class FotografiaComponent {
     text = AppComponent.text;
-    fotografie:Fotografia[]=[];
+    fotografia:Fotografia;
     aggiunta:boolean=false;
     
 
     constructor(private fotografiaService: FotografiaService) { }
     
     ngOnInit() {
-        this.fotografiaService.getElencoImmagini().subscribe(response => {
-            this.fotografie = response
-        } );
+        this.fotografia=this.fotografiaService.getFotografiaVisualizza();
+
     }
     aggiungiCarrello(fotografia:Fotografia){
         this.fotografiaService.aggiungiFotografia(fotografia);
-    }
-    visualizza(fotografia:Fotografia){
-        this.fotografiaService.rimuoviVisualizzaFotografia();
-        this.fotografiaService.visualizzaFotografia(fotografia);
+        this.aggiunta=true;
     }
 
 }

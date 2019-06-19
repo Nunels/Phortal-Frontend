@@ -1,0 +1,21 @@
+<mat-card class="mt-3">
+    <mat-card-content>
+        <h1><b>{{fotografia.nome}} <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco
+                    Fotografie</button>
+            </b></h1>
+
+
+    </mat-card-content>
+</mat-card>
+<mat-card class="mt-3">
+    <mat-card-content>
+        <img [src]="'data:image/jpg;base64,'+fotografia.img" class="fotografia" />
+        <div><button color="primary" mat-raised-button class="mt-2" (click)="aggiungiCarrello(fotografia)">
+                <mat-icon class="bottone1" aria-hidden="false" aria-label="aggiungi al carrello">add_shopping_cart
+                </mat-icon>
+            </button>
+            <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
+            <div *ngIf="aggiunta" class="notifica">Aggiunta al carrello</div>
+        </div>
+    </mat-card-content>
+</mat-card>

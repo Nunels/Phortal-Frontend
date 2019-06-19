@@ -9,6 +9,7 @@ import { Fotografia } from '../model/fotografia';
 export class FotografiaService {
 
     fotografieCarrello:Fotografia[]=[];
+    fotografiaVisualizza:Fotografia;
 
     constructor(private http: HttpClient) { }
 
@@ -33,6 +34,15 @@ export class FotografiaService {
     }
     resetCarrello(){
         this.fotografieCarrello=[];
+    }
+    visualizzaFotografia(fotografia:Fotografia){
+        this.fotografiaVisualizza=fotografia;
+    }
+    rimuoviVisualizzaFotografia(){
+        this.fotografiaVisualizza=null;
+    }
+    getFotografiaVisualizza():Fotografia{
+        return this.fotografiaVisualizza;
     }
 
     
