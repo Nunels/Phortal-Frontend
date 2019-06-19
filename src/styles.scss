@@ -67,12 +67,10 @@ mat-icon {
   height: 50%;
   width: 50%;  
 }
-h2{
+h2,h1,h3{
   color: #003366;
 }
-h1{
-  color: #003366;
-}
+
 .elenco3{
   height: 70%;
   width: 70%;  
@@ -83,6 +81,9 @@ h1{
 .card1{
   color:lightblue;
   background-color: lightblue;
+}
+.card2.mat-card{
+background-color:#003366;
 }
 
 .notifica{
@@ -95,4 +96,36 @@ h1{
 .fotografia{
   width:65%;
   height:auto; 
+}
+
+.anteprima{
+  width:20%;
+  height:auto; 
+}
+.anteprima2{
+  width:80%;
+  height:auto; 
+}
+.riga{
+  height:1 px solid;
+  color: #003366;
+  
+}
+.riga1 {
+  border: 1px solid !important;
+  height:1px solid !important;
+  color: #003366 !important;
+}
+
+.freccetta{
+  top: 6px;
+  position: relative;
+}
+.card2 h1{
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+}
+.mat-tab-label-content{
+  font-weight: bold;
+  color: #003366;
 }

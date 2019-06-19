@@ -1,40 +1,50 @@
-<mat-card class="mt-3">
+<mat-card class="mt-3 card2">
 
-<h1>
-  <b>Pannello Admin</b>
-</h1>
+  <h1>
+    <b>Pannello Admin</b>
+  </h1>
 </mat-card>
 <mat-card class="mt-3">
 
-<mat-tab-group>
-  <mat-tab label="Carica Foto">
-    <app-file-upload (fileUpload)="file = $event"></app-file-upload>
-    <button mat-raised-button color="primary" (click)="salvaImmagine()">
-      Carica <mat-icon class="bottone1">subdirectory_arrow_right</mat-icon>
-    </button>
+  <mat-tab-group>
+    <mat-tab label="Carica Foto" >
+      <div class="pt-3">
+      <app-file-upload (fileUpload)="file = $event" ></app-file-upload>
+      <button mat-raised-button color="primary" (click)="salvaImmagine()">
+        Carica <mat-icon class="bottone1">subdirectory_arrow_right</mat-icon>
+      </button>
 
-    <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
-    <div *ngIf="caricata" class="notifica"><span>File caricato </span>
-      
-      <div>
-        <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco2" /></div>
-        
-    </div>
-    <div *ngIf="inserisci" class="notifica"><span>Inserisci una fotografia</span></div>
-  </mat-tab>
-  <mat-tab label="Visualizza Richieste">
-    <div *ngIf="richieste.length>0">
-      <div *ngFor="let richiesta of richieste">
-          <div *ngFor="let fotografia of richiesta.fotoRichieste" >
-              {{fotografia.id}}</div>
-          <mat-icon aria-hidden="false">keyboard_arrow_right</mat-icon>
-        <b>Nome:</b> {{richiesta.nome}}, <b>Cognome:</b> {{richiesta.cognome}}, <b>Email:</b> {{richiesta.email}}
+      <button class="ml-2" mat-raised-button color="primary" routerLink="/">Elenco Fotografie</button>
+      <div *ngIf="caricata" class="notifica"><span>File caricato </span>
+
+        <div>
+          <img [src]="'data:image/jpg;base64,'+fotografia.img" class="elenco2" /></div>
 
       </div>
+      <div *ngIf="inserisci" class="notifica"><span>Inserisci una fotografia</span></div>
     </div>
-  </mat-tab>
+    </mat-tab>
+    <mat-tab label="Visualizza Richieste">
+      <div *ngIf="richieste.length>0">
+        <div *ngFor="let richiesta of richieste">
+          <div class="row">
+            <div class="col-12">
+              <mat-icon aria-hidden="false" class="freccetta">keyboard_arrow_right</mat-icon>
+              <b>Nome:</b> {{richiesta.nome}}, <b>Cognome:</b> {{richiesta.cognome}}, <b>Email:</b> {{richiesta.email}}
+            </div>
+            <div *ngFor="let fotografia of richiesta.fotoRichieste" class="col-md-3 col-12 p-2">
+              
+              <img [src]="'data:image/jpg;base64,'+fotografia.img" class="anteprima2" />
+              
+            </div>
+          </div>
+          <hr class="riga1">
 
-</mat-tab-group>
+        </div>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
 </mat-card>
 
 <!-- 

@@ -1,17 +1,12 @@
 export const text_properties = {
     title: {
         app: 'Silpha',
-        ex_ante: 'EX - ANTE',
         riferimento: 'RIFERIMENTO',
-        ex_post: 'EX - POST',
         dati: 'Dati',
         registrazione: 'Registrazione',
     },
     header: {
-/*         sei_in: 'Sei in:',
-        home: 'Home',
-        next: '>>',
-        certificati_bianchi: 'Certificati Bianchi', */
+
     },
     label: {
         carica_documento: 'Carica Fotografia',
